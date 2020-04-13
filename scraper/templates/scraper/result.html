@@ -10,8 +10,23 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">		
 </head>
 <body>
-	{% for link in data %}
-		{{ link.name }} --> {{ link.address }} <br/>
-	{% endfor %}
+	<table class="table">
+	  <thead class="thead-dark">
+	    <tr>
+	      <th scope="col">ID</th>
+	      <th scope="col">Name</th>
+	      <th scope="col">Link</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	{% for link in data %}
+		    <tr>		      
+		      <td>{{ link.id }}</td>
+		      <td>{{ link.name }}</td>
+		      <td>{{ link.address }}</td>
+		    </tr>
+	    {% endfor %}	    
+	  </tbody>
+	</table>
 </body>
 </html> 
